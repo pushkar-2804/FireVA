@@ -53,13 +53,20 @@ def run_alexa():
     elif "joke" in command:
         joke=pyjokes.get_joke()
         talk(joke)
+
+    elif "tell me about yourself" in command:
+        talk('Hello, I am Pushkar\'s Virtual Assistant Fire-VA')
+        talk('Nice to meet you!')
+
+    elif "weather" in command:
+        pywhatkit.search(command)
         
     else:
         talk('please say another command, I am good at telling jokes maybe you wanna hear?')
 
 talk("how can i help you")      
 run_alexa()
-time.sleep(40)
+time.sleep(20)
 
 
 
